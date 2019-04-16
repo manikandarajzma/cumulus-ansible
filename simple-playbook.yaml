@@ -1,0 +1,16 @@
+---
+- hosts: 192.168.50.131
+  vars:
+    loopback_ip: "1.1.1.1"
+  remote_user: root
+  tasks:
+  - name: write the networking config file
+    template: src=interfaces.j2 dest=/etc/network/interfaces
+    notify:
+    - restart networking
+
+  - name: ensure networking is running
+    service: name=networking state=started
+  handlers:
+  - name: restart networking
+    service: name=networking state=restarted

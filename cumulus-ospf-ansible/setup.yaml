@@ -1,0 +1,7 @@
+---
+- hosts: switches
+  vars_files:
+    - roles/ospf/vars/config.yaml
+  roles:
+  - ospf
+  remote_user: root
