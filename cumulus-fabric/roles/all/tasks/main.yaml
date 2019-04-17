@@ -1,0 +1,7 @@
+---
+- name: hostname
+  nclu:
+    commands:
+    - add hostname  {{ config[inventory_hostname].hostname }}
+
+    commit: yes

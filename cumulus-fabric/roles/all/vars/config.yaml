@@ -1,0 +1,13 @@
+config:
+  192.168.50.131: 
+    hostname: spine-1
+  192.168.50.130: 
+   hostname: spine-2
+  192.168.50.134: 
+    hostname: leaf-1
+  192.168.50.135: 
+    hostname: leaf-2
+  192.168.50.136: 
+    hostname: leaf-3
+  192.168.50.137: 
+    hostname: leaf-4
